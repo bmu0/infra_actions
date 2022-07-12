@@ -73,7 +73,7 @@ jobs:
         passphrase: ${{ secrets.SERVER_PASSWORD }}
         script: |
           # Выполняет pull образа с DockerHub
-          sudo docker pull bmu0/infra_actions
+          sudo docker pull bmu0/infra_actions:latest
           #остановка всех контейнеров
           docker ps -a -q | xargs docker stop
           sudo docker run --rm -d -p 5000:5000 bmu0/infra_action:latest
