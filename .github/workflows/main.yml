@@ -71,7 +71,7 @@ jobs:
         host: ${{ secrets.SERVER_HOST }}
         username: ${{ secrets.SERVER_USER }}
         key: ${{ secrets.SSH_KEY }}
-        passphrase: ${{ secrets.SERVER_PASSWORD }} # Если ваш ssh-ключ защищён фразой-паролем
+        passphrase: ${{ secrets.SERVER_PASSWORD }}
         script: |
           # Выполняет pull образа с DockerHub
           sudo docker pull bmu0/infra_actions
